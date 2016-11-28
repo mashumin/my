@@ -1,0 +1,397 @@
+body,ul,li,p,span,h1,h2,h3,h4,h5,h6{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    /*overflow-x: hidden;*/
+}
+a{
+    text-decoration: none;
+}
+*{
+    box-sizing: border-box;
+    font-family: "微软雅黑";
+    overflow:auto;
+}
+body,html{
+    width: 100%;
+    height:100%;
+    overflow: hidden;
+}
+/*导航*/
+@font-face {
+    font-family: 'iconfont';  /* project id："183172" */
+    src: url('http://at.alicdn.com/t/font_cu0q3x50b1yk3xr.eot');
+    src: url('http://at.alicdn.com/t/font_cu0q3x50b1yk3xr.eot?#iefix') format('embedded-opentype'),
+    url('http://at.alicdn.com/t/font_cu0q3x50b1yk3xr.woff') format('woff'),
+    url('http://at.alicdn.com/t/font_cu0q3x50b1yk3xr.ttf') format('truetype'),
+    url('http://at.alicdn.com/t/font_cu0q3x50b1yk3xr.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family: "iconfont";
+}
+.nav{
+    width: 15%;
+    height:100%;
+    background: #000;
+    float: left;
+    position: relative;
+}
+.nav div{
+    float: left;
+    margin: 0 auto;
+    margin-left: 10px;
+}
+.nav ul{
+    width: 100%;
+    height:60%;
+    position: absolute;
+    top:0;bottom: 0;margin: auto;
+}
+.nav li{
+    width: 100%;
+    height:70px;
+    text-align: center;
+    color: #fff;
+    line-height: 70px;
+    font-size: 20px;
+    cursor: pointer;
+    /*padding-left: 50px;*/
+    transition: all 1s;
+}
+
+.nav li:hover{
+    transform: translateY(-15px);
+}
+
+.main{
+    width:85%;
+    height:100%;
+    background: url(../img/4.jpg);
+    background-size: cover;
+    float: right;
+    /*bacground:url(../img/4.jpg);*/
+    position: relative;
+}
+.zhao{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100%;
+    background: rgba(0,0,0,0.5);
+}
+
+/*首页*/
+.box{
+    width:80%;
+    height:90%;
+    /*background: red;*/
+    margin: 0 auto;
+    padding-top: 40px;
+    overflow: hidden;
+}
+
+.left{
+    width:50%;
+    height:50%;
+    float: left;
+    margin: 0 auto;
+}
+.my{
+    width: 200px;
+    height:200px;
+    border-radius: 50%;
+    background: url(../img/11.jpg);
+    background-size: cover;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+.box div:nth-child(2){
+    width:430px;
+    height:auto;
+    padding: 40px;
+    color: #fff;
+    line-height: 1.5;
+    margin: 0 auto;
+}
+.box div:nth-child(2) h1,.box div:nth-child(2) h3{
+    text-align: center;
+}
+.canvas{
+    width: 300px;
+    height:250px;
+    margin: 0 auto;
+}
+canvas{
+    background: #fff;
+}
+.canvas .buts{
+    width:90px;
+    height:30px;
+    color: #fff;
+    background: #4A93C7;
+    border-radius: 5px;
+    line-height: 30px;
+    text-align: center;
+    margin: 0 auto;
+    cursor: pointer;
+}
+/*关于我*/
+.about{
+    width:85%;
+    height:100%;
+    position: absolute;
+    top:0;
+    right:0;
+    background: #FF6347;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+.aboutmy{
+    width:100%;
+    height:100%;
+}
+.imgbox{
+    width:200px;
+    height:200px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+.imgbox div{
+    border-radius: 50%;
+    width: 70%;
+    height:70%;
+    position: absolute;
+    top:0;bottom: 0;margin: auto;
+    /*background: #000;*/
+    left:10%;
+
+    transition: all 2s;
+}
+.imgbox div:nth-child(1){
+    background: url(../img/m1.jpg) no-repeat;
+    -webkit-background-size:cover;
+    background-size:cover;
+}
+.imgbox div:nth-child(2){
+    background: url(../img/m5.jpg)  no-repeat;
+    -webkit-background-size:cover;
+    background-size:cover;
+}
+.imgbox div:nth-child(3){
+    background: url(../img/m3.jpg)  no-repeat;
+    -webkit-background-size:cover;
+    background-size:cover;
+}
+.imgbox div:nth-child(4){
+    background: url(../img/m4.jpg)  no-repeat;
+    -webkit-background-size:cover;
+    background-size:cover;
+}
+.jianjie{
+    /*width:30%;*/
+    height:auto;
+    margin: auto;;
+    float: left;
+    padding-top: 50px;
+    /*position: absolute;*/
+    /*top:0;bottom: 0;margin: auto;*/
+    /*left:50%;*/
+}
+.jianjie p{
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.8;
+    -webkit-animation:p 2s forwards cubic-bezier(0.58, 0.64, 0.88, 1.22) 2s;
+    -o-animation:p 2s forwards cubic-bezier(0.58, 0.64, 0.88, 1.22) 2s;
+    transform: translate(0,1000px);
+    text-align: center;
+}
+@keyframes p {
+    0%{
+        transform: translate(1000px,0);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0,0);
+        opacity: 1;
+    }
+}
+.jianjie p:nth-child(1){
+    font-size: 30px;
+    line-height: 2;
+}
+/*我的技能*/
+.teg{
+    width: 85%;
+    height:100%;
+    background: #9B59B6;
+    position: absolute;
+    top:0;
+    right:0;
+}
+.myteg {
+    padding: 30px;
+    width:100%;
+    height: 100%;
+    /*background: #fff;*/
+    animation: myteg 2s forwards cubic-bezier(0.58, 0.64, 0.88, 1.22);
+    /*-timeing-function:;*/
+}
+@keyframes myteg {
+    0%{
+        -webkit-transform: translate(1000px,0);
+        -moz-transform: translate(1000px, 0);
+        -ms-transform: translate(1000px ,0);
+        -o-transform: translate(1000px, 0);
+        transform: translate(1000px ,0);
+    }
+    100%{
+        transform: translate(0,0);
+    }
+}
+.myteg div{
+    float: left;
+    height:auto;
+    padding: 20px;
+    /*background: #fff;*/
+}
+.myteg>div{
+    transition: all 2s ease;
+    -webkit-transform-origin:center center;
+    -moz-transform-origin:center center;
+    -ms-transform-origin:center center;
+    -o-transform-origin:center center;
+    transform-origin:center center;
+}
+
+.myteg p{
+    color:#fff;
+    line-height: 2;
+    text-align: center;
+}
+@font-face {
+    font-family: inco;
+    src: url('font/iconfont.eot');
+    src: url('font/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('font/iconfont.woff') format('woff'),
+    url('font/iconfont.ttf') format('truetype'),
+    url('font/iconfont.svg#iconfont') format('svg');
+}
+.icon-nodejs:before{
+    content: "\e6ba";
+}
+.font{
+    font-family: inco;
+    color:#fff;
+    font-size: 50px;
+    text-align: center;
+}
+.icon-css3:before{
+    content: "\e674";
+}
+.icon-js:before{
+    content: "\e603";
+}
+.icon-html5:before{
+    content: "\e604";
+}
+/*我的作品*/
+.work{
+    width:85%;
+    height:100%;
+    background: #FF1493;
+    position: absolute;
+    top:0;
+    right:0;
+}
+.mywork{
+    padding: 50px;
+    animation: divs 2s forwards cubic-bezier(0.58, 0.64, 0.88, 1.22);
+}
+.mywork div{
+    height:250px;
+    overflow: hidden;
+    /*margin-bottom: 10px;*/
+    /*margin-left: 10px;*/
+    position: relative;
+
+}
+@keyframes divs {
+    0%{
+        transform: translate(1000px,0);
+    }
+    100%{
+        transform: translate(0,0);
+    }
+}
+.mywork img{
+    width:120%;
+    height:120%;
+}
+.mywork div:hover img{
+    width:100%;
+    height:100%;
+}
+.mywork .zhaoz{
+    width: 100%;
+    height:100%;
+    position: absolute;
+    top:0;left: 0;
+    background: rgba(0,0,0,0);
+    color: #fffdef;
+    font-size: 20px;
+
+    transition: all 2s;
+}
+.mywork div:hover{
+    animation: zhaoz 2s forwards;
+}
+.zhaoz a{
+    color: #fffdef;
+    font-size: 20px;
+    transform: translate(0,300px);
+    transition: all 2s;
+    text-align: center;
+    display: block;
+    width:100%;
+    line-height: 250px;
+}
+@keyframes zhaoz {
+    0%{
+        background: rgba(0,0,0,0);
+    }
+    100%{
+        background: rgba(0,0,0,0.7);
+    }
+}
+@keyframes zhaoz1 {
+    0%{
+        background: rgba(0,0,0,0.7);
+    }
+    100%{
+        background: rgba(0,0,0,0);
+    }
+}
+
+@media screen and (min-width: 910px) {
+    .imgbox{
+        width: 45%;
+        height:100%;
+        float: left;
+        position: relative;
+        overflow: hidden;
+    }
+    .imgbox div{
+        border-radius: 0;
+        width: 70%;
+        height:70%;
+        position: absolute;
+        top:0;bottom: 0;margin: auto;
+        /*background: #000;*/
+        left:10%;
+
+        transition: all 2s;
+    }
+}
