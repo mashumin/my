@@ -69,7 +69,6 @@ body,html{
     background: url(../img/4.jpg);
     background-size: cover;
     float: right;
-    /*bacground:url(../img/4.jpg);*/
     position: relative;
 }
 .zhao{
@@ -89,6 +88,18 @@ body,html{
     margin: 0 auto;
     padding-top: 40px;
     overflow: hidden;
+    -webkit-animation:box 1s linear forwards;
+    -o-animation:box 1s linear forwards;
+    animation:box 1s linear forwards;
+    transform: translate(1000px,0);
+}
+@keyframes box {
+    0%{
+        transform: translate(1000px,0);
+    }
+    100%{
+        transform: translate(0px,0);
+    }
 }
 
 .left{
@@ -106,7 +117,7 @@ body,html{
     margin: 0 auto;
     margin-top: 40px;
 }
-.box div:nth-child(2){
+.box>div:nth-child(2){
     width:430px;
     height:auto;
     padding: 40px;
@@ -114,16 +125,17 @@ body,html{
     line-height: 1.5;
     margin: 0 auto;
 }
-.box div:nth-child(2) h1,.box div:nth-child(2) h3{
+.box>div:nth-child(2) h1,.box div:nth-child(2) h3{
     text-align: center;
 }
 .canvas{
     width: 300px;
     height:250px;
     margin: 0 auto;
+    position: relative;
 }
 canvas{
-    background: #fff;
+    /*background: #fff;*/
 }
 .canvas .buts{
     width:90px;
@@ -135,6 +147,12 @@ canvas{
     text-align: center;
     margin: 0 auto;
     cursor: pointer;
+    position: absolute;
+    top:0;bottom: 50;left: 0;right: 0;
+    margin:auto;
+}
+.canvas .buts:nth-child(2){
+    display: none;
 }
 /*关于我*/
 .about{
@@ -143,9 +161,11 @@ canvas{
     position: absolute;
     top:0;
     right:0;
+    /*float: left;*/
     background: #FF6347;
     margin: 0 auto;
     padding-top: 40px;
+    overflow-x: hidden;
 }
 .aboutmy{
     width:100%;
@@ -230,6 +250,7 @@ canvas{
     position: absolute;
     top:0;
     right:0;
+    /*float: left;*/
 }
 .myteg {
     padding: 30px;
@@ -305,6 +326,7 @@ canvas{
     position: absolute;
     top:0;
     right:0;
+    overflow-x: hidden;
 }
 .mywork{
     padding: 50px;
@@ -358,6 +380,13 @@ canvas{
     width:100%;
     line-height: 250px;
 }
+.erji{
+    -webkit-transition: all 2s cubic-bezier(0.58, 0.64, 0.88, 1.22);
+    -moz-transition: all 2s cubic-bezier(0.58, 0.64, 0.88, 1.22);
+    -ms-transition: all 2s cubic-bezier(0.58, 0.64, 0.88, 1.22);
+    -o-transition: all 2s cubic-bezier(0.58, 0.64, 0.88, 1.22);
+    transition: all 2s cubic-bezier(0.58, 0.64, 0.88, 1.22);
+}
 @keyframes zhaoz {
     0%{
         background: rgba(0,0,0,0);
@@ -393,5 +422,11 @@ canvas{
         left:10%;
 
         transition: all 2s;
+    }
+}
+@media screen and (max-width: 910px){
+    .jianjie{
+        padding: 0;
+        margin: 0 auto;
     }
 }

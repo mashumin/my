@@ -37,7 +37,7 @@ $(function(){
         $(".zhaoz a").eq(index).css("transform","translate(0,300px)");
     })
 
-    
+
     $(".erji").css("right","-85%").eq(0).css("right","0")
     var num=1;
     var nex=0;
@@ -45,22 +45,52 @@ $(function(){
     $(".nav li").click(function(){
         var index=$(this).index();
         nex=index;
-        $(".erji").eq(num).css({"right":"-87%","transform":"translate(0,0)","transition":"all 2s cubic-bezier(0.58, 0.64, 0.88, 1.22)"});
-
-        $(".erji").eq(nex).css({"right":"0","transform":"translate(0,0)","transition":"all 2s cubic-bezier(0.58, 0.64, 0.88, 1.22)"});
-    num=nex;
+        $(".erji").eq(num).css({"right":"-87%","transform":"translate(0,0)"});
+        $(".erji").eq(nex).css({"right":"0","transform":"translate(0,0)"});
+        num=nex;
         $(".erji").eq(0).css("right","0")
+
+        $(".erji")[nex].addEventListener("webkitTransitionEnd",function(){
+
+        })
     })
-
     // 音乐
-    // var aduio=$(".mus");
-    // console.log(aduio)
-    // $(".buts").click(function(){
-    //     $(".mus").pause();
-    // })
 
-    document.querySelector(".buts").onclick=function(){
+    document.querySelector(".clos").onclick=function(){
         document.querySelector(".mus").pause();
+        document.querySelector(".clos").style.display="none";
+        document.querySelector(".open").style.display="block";
     }
-    
+    document.querySelector(".open").onclick=function(){
+        document.querySelector(".mus").play();
+        document.querySelector(".clos").style.display="block";
+        document.querySelector(".open").style.display="none";
+    }
+
+    var audio=document.querySelector("audio");
+    var canvas=document.querySelector("canvas");
+    var cobj=canvas.getContext("2d");
+    var audioObj=new AudioContext();
+    var sources=audioObj.createMediaElementSource(audio);  //音频源
+    var analyser=audioObj.createAnalyser();                //分析器
+    //音频源-分析器-与输出设备连接
+    sources.connect(analyser);
+    analyser.connect(audioObj.destination);
+
+    setInterval(function(){
+        cobj.clearRect(0,0,300,250);
+        var array=new Uint8Array(analyser.frequencyBinCount);
+        analyser.getByteFrequencyData(array);
+        var rate=array.length/canvas.width;
+        cobj.save();
+        cobj.translate(0,300);
+        cobj.beginPath();
+        for(var i=0;i<array.length;i++){
+            cobj.lineTo(i,-array[i]);
+        }
+        cobj.strokeStyle="#fff";
+        cobj.lineWidth=2;
+        cobj.stroke();
+        cobj.restore();
+    },40)
 })
