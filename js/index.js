@@ -38,20 +38,23 @@ $(function(){
     })
 
 
-    $(".erji").css("right","-85%").eq(0).css("right","0")
+    $(".erji").css({"right":"-85%","zIndex":"0"}).eq(0).css({"right":"0","zIndex":"1"})
     var num=1;
     var nex=0;
 
     $(".nav li").click(function(){
         var index=$(this).index();
         nex=index;
-        $(".erji").eq(num).css({"right":"-87%","transform":"translate(0,0)"});
-        $(".erji").eq(nex).css({"right":"0","transform":"translate(0,0)"});
+        $(".erji").eq(num).css({"right":"-87%","transform":"translate(0,0)","zIndex":"2"});
+        $(".erji").eq(nex).css({"right":"0","transform":"translate(0,0)","zIndex":"3"});
         num=nex;
         $(".erji").eq(0).css("right","0")
 
-        $(".erji")[nex].addEventListener("webkitTransitionEnd",function(){
-
+        $(".erji")[1].addEventListener("webkitTransitionEnd",function(){
+            $(".imgbox").css("transform","translate(0,0)")
+        })
+        $(".erji")[2].addEventListener("webkitTransitionEnd",function(){
+            $(".myteg .dh").css({"transform":"rotate(360deg)","opacity":"1"})
         })
     })
     // 音乐
