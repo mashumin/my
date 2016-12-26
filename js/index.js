@@ -96,4 +96,6 @@ $(function(){
         cobj.stroke();
         cobj.restore();
     },40)
+    
+    $(".fullpage").fullpage()
 })

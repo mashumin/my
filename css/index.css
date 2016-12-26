@@ -18,17 +18,7 @@ body,html{
     overflow: hidden;
 }
 /*导航*/
-@font-face {
-    font-family: 'iconfont';  /* project id："183172" */
-    src: url('http://at.alicdn.com/t/font_cu0q3x50b1yk3xr.eot');
-    src: url('http://at.alicdn.com/t/font_cu0q3x50b1yk3xr.eot?#iefix') format('embedded-opentype'),
-    url('http://at.alicdn.com/t/font_cu0q3x50b1yk3xr.woff') format('woff'),
-    url('http://at.alicdn.com/t/font_cu0q3x50b1yk3xr.ttf') format('truetype'),
-    url('http://at.alicdn.com/t/font_cu0q3x50b1yk3xr.svg#iconfont') format('svg');
-}
-.iconfont{
-    font-family: "iconfont";
-}
+
 .nav{
     width: 15%;
     height:100%;
@@ -63,13 +53,25 @@ body,html{
     transform: translateY(-15px);
 }
 /*首页*/
+.fullpage{
+    width: 85%;
+    height: 100%;
+    float: right;
+}
+.swiper-container{
+    width: 85%;
+    height:100%;
+    float: right;
+}
 .main{
     width:85%;
     height:100%;
     background: url(../img/4.jpg);
     background-size: cover;
     float: right;
-    position: relative;
+    position: absolute;
+    top:0;
+    right:0;
     /*z-index:1;*/
 }
 .zhao{
@@ -86,7 +88,6 @@ body,html{
 .box{
     width:80%;
     height:90%;
-    /*background: red;*/
     margin: 0 auto;
     padding-top: 40px;
     overflow: hidden;
@@ -94,6 +95,8 @@ body,html{
     -o-animation:box 1s linear forwards;
     animation:box 1s linear forwards;
     transform: translate(1000px,0);
+    /*transition: all 2s;*/
+    /*transform: translate(1000px,0)*/
 }
 @keyframes box {
     0%{
@@ -103,7 +106,9 @@ body,html{
         transform: translate(0px,0);
     }
 }
-
+/*.active .box{*/
+    /*transform: translate(0px,0)*/
+/*}*/
 .left{
     width:50%;
     height:50%;
@@ -150,7 +155,7 @@ canvas{
     margin: 0 auto;
     cursor: pointer;
     position: absolute;
-    top:0;bottom: 50;left: 0;right: 0;
+    top:0;bottom: 50px;left: 0;right: 0;
     margin:auto;
 }
 .canvas .buts:nth-child(2){
@@ -356,8 +361,8 @@ canvas{
     /*margin-bottom: 10px;*/
     /*margin-left: 10px;*/
     position: relative;
-
 }
+
 @keyframes divs {
     0%{
         transform: translate(1000px,0);

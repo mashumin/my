@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!--<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>-->
     <title>马淑敏个人主页</title>
     <link rel="stylesheet" href="css/less.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <link rel="stylesheet" href="css/font/iconfont.css">
 
     <script src="js/jquery.js"></script>
     <script src="js/index.js"></script>
@@ -16,20 +18,22 @@
 <div class="nav">
     <ul class="container">
         <li class="row">
-            <div class="iconfont shouy">&#xe600;</div>
+            <div class="iconfont icon-shouye2-copy shouy"></div>
             <div class="col-s-hide">首页</div>
         </li>
-        <li class="row"><div class="iconfont shouy">&#xe6ea;</div>
+        <li class="row"><div class="iconfont shouy icon-guanyuwomen2"></div>
             <div class="col-s-hide">关于我</div></li>
-        <li class="row"><div class="iconfont shouy">&#xe608;</div>
+        <li class="row"><div class="iconfont shouy icon-jineng"></div>
             <div class="col-s-hide">我的技能</div></li>
-        <li class="row"><div class="iconfont shouy">&#xe614;</div>
+        <li class="row"><div class="iconfont shouy icon-opus"></div>
             <div class="col-s-hide">我的作品</div></li>
     </ul>
 </div>
 
 <!--首页-->
-<div class="erji main">
+<!--<div class="swiper-container">-->
+<!--<div class="fullpage swiper-wrapper">-->
+<div class="erji main section ">
     <div class="zhao">
         <div class="box">
             <div class="my"></div>
@@ -49,7 +53,7 @@
     </div>
 </div>
 <!--关于我-->
-<div class=" erji about container" color="#FF6347">
+<div class="section erji about container " color="#FF6347">
     <div class="row aboutmy">
         <div class="imgbox col-l-4">
             <div></div>
@@ -70,7 +74,7 @@
     </div>
 </div>
 <!--我的技能-->
-<div class="erji teg container">
+<div class="section erji teg container ">
     <div class="row myteg">
         <div class="html col-l-6 dh">
             <div class="font icon-html5"></div>
@@ -95,35 +99,54 @@
     </div>
 </div>
 <!--我的作品-->
-<div class="erji work container">
+<div class="section erji work container ">
     <div class="row mywork">
         <div class="col-l-4 col-m-6">
             <img src="img/zp1.jpg" alt="">
 
-            <div class="zhaoz"> <a href="">欢腾鞋业</a></div>
+            <div class="zhaoz"> <a href="http://msmzzj.duapp.com/phpcmses">欢腾鞋业</a></div>
         </div>
         <div class="col-l-4 col-m-6">
             <img src="img/zp2.jpg" alt="">
-            <div class="zhaoz"><a href="">伊莎美尔</a></div>
+            <div class="zhaoz"><a href="http://msmzzj.duapp.com/phpcms/install/index.html">伊莎美尔</a></div>
         </div>
         <div class="col-l-4 col-m-6">
             <img src="img/zp3.jpg" alt="">
-            <div class="zhaoz"><a href="">蓝幕文化传媒</a></div>
+            <div class="zhaoz"><a href="http://msmzzj.duapp.com/denglu/meishi/index.php">蓝幕文化传媒</a></div>
         </div>
         <div class="col-l-4 col-m-6">
             <img src="img/zp4.jpg" alt="">
-            <div class="zhaoz"><a href="">跑酷游戏</a></div>
+            <div class="zhaoz"><a href="https://mashumin.github.io/youxi/">跑酷游戏</a></div>
         </div>
         <div class="col-l-4 col-m-6">
             <img src="img/zp5.jpg" alt="">
-            <div class="zhaoz"><a href="">画板</a></div>
+            <div class="zhaoz"><a href="https://mashumin.github.io/canvas/">画板</a></div>
         </div>
         <div class="col-l-4 col-m-6">
             <img src="img/zp6.jpg" alt="">
-            <div class="zhaoz"><a href="">3D房子模型</a></div>
+            <div class="zhaoz"><a href="https://mashumin.github.io/room/">3D房子模型</a></div>
         </div>
     </div>
 </div>
-
+<!--</div>-->
+<!--</div>-->
 </body>
+<script>
+//    function size(origin,type){
+//        var type=type || "x";
+//        if(type=="x"){
+//            var widths=document.documentElement.clientWidth;
+//            var sizes=widths/origin*100;
+//        }else if(type=="y"){
+//            var heights=document.documentElement.clientHeight;
+//            var sizes=heights/origin*100;
+//        }
+//        document.getElementsByTagName("html")[0].style.fontSize=sizes+"px";
+//
+//    }
+//    window.onload=function(){
+//        size(750);
+//        var mySwiper = new Swiper ('.swiper-container')
+//    }
+</script>
 </html>
