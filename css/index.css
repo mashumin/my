@@ -163,13 +163,15 @@ body,html{
     position: absolute;
     bottom: 0;
     right:0;
+    left:0;
+    margin: auto;
     /*border:1px solid #fff;*/
     overflow: visible;
 }
 canvas{
     /*background: #fff;*/
 }
-.canvas .buts{
+.buts{
     width:90px;
     height:30px;
     color: #fff;
@@ -181,8 +183,9 @@ canvas{
     cursor: pointer;
     position: absolute;
     bottom: 0px;
-    left: -650px;
+    /*left: -650px;*/
     right: 0px;
+    left:0px;
     margin:auto;
 
 }
@@ -495,6 +498,14 @@ canvas{
         left:10%;
 
         transition: all 2s;
+    }
+    .canvas .buts{
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        marigin:auto;
+        z-index:11;
     }
 }
 @media screen and (max-width: 910px){
