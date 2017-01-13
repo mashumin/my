@@ -100,7 +100,6 @@ $(function(){
         cobj.restore();
     },40)
     
-    $(".fullpage").fullpage()
 
 
     // 钟表

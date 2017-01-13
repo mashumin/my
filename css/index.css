@@ -379,6 +379,7 @@ canvas{
 .work{
     width:85%;
     height:100%;
+    /*background: #fff;*/
     background: #FF1493;
     position: absolute;
     top:0;
